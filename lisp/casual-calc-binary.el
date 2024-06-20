@@ -25,7 +25,6 @@
 ;;; Code:
 (require 'calc)
 (require 'transient)
-(require 'casual-lib)
 (require 'casual-calc-labels)
 (require 'casual-calc-radix)
 (require 'casual-calc-utils)
@@ -53,7 +52,7 @@
      :transient t)
     ("z" "Leading Zeroes" calc-leading-zeros
      :description (lambda ()
-                    (casual-lib-checkbox-label calc-leading-zeros "Leading Zeroes"))
+                    (casual-calc--checkbox-label calc-leading-zeros "Leading Zeroes"))
      :transient t)
     ("," "Thousands Separator…" calc-group-char
      :description (lambda ()
@@ -63,8 +62,8 @@
     ("u" "Unpack Bits" casual-calc--calc-unpack-bits :transient nil)
     ("p" "Pack Bits" casual-calc--calc-pack-bits :transient nil)]]
   [:class transient-row
-          (casual-lib-quit-one)
-          (casual-lib-quit-all)
+          (casual-calc-quit-one)
+          (casual-calc-quit-all)
           (casual-calc-undo-suffix)])
 
 

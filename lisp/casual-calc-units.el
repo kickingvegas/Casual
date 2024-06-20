@@ -25,7 +25,6 @@
 ;;; Code:
 (require 'calc)
 (require 'transient)
-(require 'casual-lib)
 (require 'casual-calc-utils)
 
 (transient-define-prefix casual-calc-units-tmenu ()
@@ -40,8 +39,8 @@
    ("x" "Extract Units" calc-extract-units :transient nil)
    ("v" "View Units" calc-view-units-table :transient nil)]
   [:class transient-row
-          (casual-lib-quit-one)
-          (casual-lib-quit-all)
+          (casual-calc-quit-one)
+          (casual-calc-quit-all)
           (casual-calc-undo-suffix)])
 
 

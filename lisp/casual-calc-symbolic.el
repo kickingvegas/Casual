@@ -25,7 +25,6 @@
 ;;; Code:
 (require 'calc)
 (require 'transient)
-(require 'casual-lib)
 (require 'casual-calc-labels)
 (require 'casual-calc-angle-measure)
 (require 'casual-calc-graphics)
@@ -81,7 +80,7 @@
    ["Settings"
     ("A" calc-algebraic-mode
      :description (lambda ()
-                    (casual-lib-checkbox-label calc-algebraic-mode
+                    (casual-calc--checkbox-label calc-algebraic-mode
                                             "Algebraic Mode"))
      :transient t)
     ("M" calc-symbolic-mode :description casual-calc-symbolic-mode-label :transient t)
@@ -93,8 +92,8 @@
 
   [""
    :class transient-row
-   (casual-lib-quit-one)
-   (casual-lib-quit-all)
+   (casual-calc-quit-one)
+   (casual-calc-quit-all)
    (casual-calc-undo-suffix)])
 
 (transient-define-prefix casual-calc-subformula-tmenu ()
@@ -139,8 +138,8 @@
 
   [""
    :class transient-row
-   (casual-lib-quit-one)
-   (casual-lib-quit-all)
+   (casual-calc-quit-one)
+   (casual-calc-quit-all)
    (casual-calc-undo-suffix)])
 
 (transient-define-prefix casual-calc-symbolic-manipulation-tmenu ()
@@ -155,8 +154,8 @@ Commands to manipulate a symbolic expression."
 
   [""
    :class transient-row
-   (casual-lib-quit-one)
-   (casual-lib-quit-all)
+   (casual-calc-quit-one)
+   (casual-calc-quit-all)
    (casual-calc-undo-suffix)])
 
 
@@ -176,8 +175,8 @@ Commands to manipulate a polynomial expression."
 
   [""
    :class transient-row
-   (casual-lib-quit-one)
-   (casual-lib-quit-all)
+   (casual-calc-quit-one)
+   (casual-calc-quit-all)
    (casual-calc-undo-suffix)])
 
 (transient-define-prefix casual-calc--calculus-tmenu ()
@@ -191,8 +190,8 @@ Commands to perform Calculus."
 
   [""
    :class transient-row
-   (casual-lib-quit-one)
-   (casual-lib-quit-all)
+   (casual-calc-quit-one)
+   (casual-calc-quit-all)
    (casual-calc-undo-suffix)])
 
 (transient-define-prefix casual-calc-solve-symbolic-tmenu ()
@@ -204,8 +203,8 @@ Commands to solve an algebraic expression symbolically."
 
   [""
    :class transient-row
-   (casual-lib-quit-one)
-   (casual-lib-quit-all)
+   (casual-calc-quit-one)
+   (casual-calc-quit-all)
    (casual-calc-undo-suffix)])
 
 (transient-define-prefix casual-calc-solve-numeric-tmenu ()
@@ -220,8 +219,8 @@ Commands to solve an algebraic expression numerically."
 
   [""
    :class transient-row
-   (casual-lib-quit-one)
-   (casual-lib-quit-all)
+   (casual-calc-quit-one)
+   (casual-calc-quit-all)
    (casual-calc-undo-suffix)])
 
 (transient-define-prefix casual-calc-curve-fit-tmenu ()
@@ -234,8 +233,8 @@ Curve fit commands."
 
   [""
    :class transient-row
-   (casual-lib-quit-one)
-   (casual-lib-quit-all)
+   (casual-calc-quit-one)
+   (casual-calc-quit-all)
    (casual-calc-undo-suffix)])
 
 (transient-define-prefix casual-calc-summations-tmenu ()
@@ -249,8 +248,8 @@ Summation commands."
 
   [""
    :class transient-row
-   (casual-lib-quit-one)
-   (casual-lib-quit-all)
+   (casual-calc-quit-one)
+   (casual-calc-quit-all)
    (casual-calc-undo-suffix)])
 
 (transient-define-prefix casual-calc-symbolic-logic-tmenu ()
@@ -278,8 +277,8 @@ Symbolic logic commands."
 
   [""
    :class transient-row
-   (casual-lib-quit-one)
-   (casual-lib-quit-all)
+   (casual-calc-quit-one)
+   (casual-calc-quit-all)
    (casual-calc-undo-suffix)])
 
 

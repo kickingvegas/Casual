@@ -25,7 +25,6 @@
 ;;; Code:
 (require 'calc)
 (require 'transient)
-(require 'casual-lib)
 (require 'casual-calc-utils)
 
 (transient-define-prefix casual-calc-time-tmenu ()
@@ -38,8 +37,8 @@
    ("+" "Add Business Days" calc-business-days-plus :transient nil)
    ("-" "Subtract Business Days" calc-business-days-minus :transient nil)]
   [:class transient-row
-          (casual-lib-quit-one)
-          (casual-lib-quit-all)
+          (casual-calc-quit-one)
+          (casual-calc-quit-all)
           (casual-calc-undo-suffix)])
 
 (transient-define-prefix casual-calc-first-day-tmenu ()
@@ -49,8 +48,8 @@
    ("m" "Month" calc-new-month :transient nil)
    ("y" "Year" calc-new-year :transient nil)]
   [:class transient-row
-          (casual-lib-quit-one)
-          (casual-lib-quit-all)
+          (casual-calc-quit-one)
+          (casual-calc-quit-all)
           (casual-calc-undo-suffix)])
 
 (provide 'casual-calc-time)

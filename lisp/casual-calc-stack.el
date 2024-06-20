@@ -27,7 +27,6 @@
 (require 'calc-yank)
 (require 'calc-undo)
 (require 'transient)
-(require 'casual-lib)
 (require 'casual-calc-utils)
 
 (defun casual-calc-customize-kill-line-numbering ()
@@ -57,8 +56,8 @@ from `kill-ring' operations."
      casual-calc-customize-kill-line-numbering :transient nil)]]
   [""
    :class transient-row
-   (casual-lib-quit-one)
-   (casual-lib-quit-all)
+   (casual-calc-quit-one)
+   (casual-calc-quit-all)
    ("s" "Save Settings" calc-save-modes :transient t)])
 
 

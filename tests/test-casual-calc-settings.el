@@ -63,7 +63,6 @@
                         ("aq" . casual-calc-angle-measure-tmenu)
                         ("Rq" . casual-calc-radix-tmenu)
                         ("fq" . casual-calc-float-format-tmenu)
-                        ("u" . casual-lib-customize-casual-lib-use-unicode)
                         ;; ("gq" . calc-group-digits)
                         ;; (",q" . calc-group-char)
                         ;; (".q" . calc-point-char)

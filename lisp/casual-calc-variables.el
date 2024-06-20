@@ -25,7 +25,6 @@
 ;;; Code:
 (require 'calc)
 (require 'transient)
-(require 'casual-lib)
 (require 'casual-calc-labels)
 (require 'casual-calc--calc)
 (require 'casual-calc-utils)
@@ -45,8 +44,8 @@ menu."
    ("O" "Open Calc Settings File" casual-calc-open-settings-file :transient nil)
    ("i" "Insert variables into buffer…" casual-calc--calc-insert-variables :transient t)]
   [:class transient-row
-          (casual-lib-quit-one)
-          (casual-lib-quit-all)
+          (casual-calc-quit-one)
+          (casual-calc-quit-all)
           (casual-calc-undo-suffix)])
 
 (provide 'casual-calc-variables)

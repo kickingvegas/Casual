@@ -6,7 +6,7 @@
 ;; URL: https://github.com/kickingvegas/casual-calc
 ;; Keywords: tools
 ;; Version: 1.8.0
-;; Package-Requires: ((emacs "29.1") (casual-lib "1.0.0"))
+;; Package-Requires: ((emacs "29.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -35,7 +35,6 @@
 (require 'calc)
 (require 'calc-math) ; needed to reference some symbols not loaded in `calc'.
 (require 'transient)
-(require 'casual-lib)
 (require 'casual-calc-utils)
 (require 'casual-calc--calc)
 (require 'casual-calc-version)
@@ -112,7 +111,7 @@
 
   [:class transient-row
           ;; Note: no need to C-g for main menu
-          (casual-lib-quit-all)
+          (casual-calc-quit-all)
           (casual-calc-undo-suffix)
           ("q" "Quit Calc" calc-quit)])
 

@@ -25,7 +25,6 @@
 ;;; Code:
 (require 'calc)
 (require 'transient)
-(require 'casual-lib)
 (require 'casual-calc-utils)
 
 (transient-define-prefix casual-calc-trail-tmenu ()
@@ -52,9 +51,9 @@
     ("k" "Kill Selected" calc-trail-kill :transient t)]]
 
   [:class transient-row
-          (casual-lib-quit-one)
+          (casual-calc-quit-one)
           ("s" "Save Settings" calc-save-modes :transient t)
-          (casual-lib-quit-all)])
+          (casual-calc-quit-all)])
 
 (provide 'casual-calc-trail)
 ;;; casual-calc-trail.el ends here
